@@ -2,6 +2,14 @@
 
 PWA offline-first para operação de salão. O IndexedDB continua sendo a fonte local; a API opcional sincroniza mudanças entre dispositivos.
 
+## Instalar pelo celular ou tablet
+
+O GitHub Actions publica automaticamente a versão instalável em:
+
+`https://browndark.github.io/brubar-web/`
+
+No Android, abra o link no Chrome e escolha **Instalar app** ou **Adicionar à tela inicial**. No iPhone/iPad, abra no Safari, toque em compartilhar e escolha **Adicionar à Tela de Início**. O app continua salvando os dados no dispositivo mesmo sem internet.
+
 ## Rodar localmente
 
 ```bash
