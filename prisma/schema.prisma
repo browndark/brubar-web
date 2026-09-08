@@ -1,0 +1,22 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model SyncChange {
+  id              String   @id @default(uuid())
+  establishmentId String
+  eventId         String   @unique
+  entityType      String
+  entityId        String
+  operation       String
+  payload         Json
+  createdAt       DateTime @default(now())
+
+  @@index([establishmentId, createdAt])
+  @@index([establishmentId, entityType, entityId])
+}
